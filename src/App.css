@@ -1,0 +1,567 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.email-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+.topbar {
+  background: #a9a9a9;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.brand {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.nav {
+  display: flex;
+  gap: 5px;
+}
+
+.nav a,
+.topbar-right a {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.icon-link:hover {
+  color: orange;
+}
+.icon-link:hover .header-icon {
+  filter: brightness(0) invert(1);
+}
+
+.header-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  display: block;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 110px 34px 70px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+}
+
+.image-contact {
+  margin-top: 18px;
+}
+
+.image-contact p {
+  margin: 6px 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #000;
+  margin: 0 0 20px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+.banner-section {
+  margin: -80px 0 30px;
+  width: 100%;
+}
+
+.banner-wrap {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 0 0 360px;
+}
+
+.banner-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.banner-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 12px;
+}
+
+.banner-arrow {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  color: #888;
+  cursor: pointer;
+  padding: 0 5px;
+  transition: color 0.2s ease;
+  position: relative;
+  top: 6px;
+}
+
+.banner-arrow:hover {
+  color: orange;
+}
+
+.banner-arrow-space {
+  width: 10px;
+}
+
+.banner-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.banner-dot {
+  width: 18px;
+  height: 3px;
+  border: none;
+  border-radius: 999px;
+  background: #bdbdbd;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.2s ease;
+}
+
+.banner-dot:hover {
+  background: orange;
+}
+
+.banner-dot.active {
+  background: orange;
+}
+
+.section {
+  margin-top: 80px;
+  text-align: left;
+}
+
+.section p,
+.section ul,
+.section li,
+.section a {
+  text-align: left;
+}
+.section:not(#publications) {
+  text-align: left;
+}
+
+.section:not(#publications) p,
+.section:not(#publications) ul,
+.section:not(#publications) li,
+.section:not(#publications) a {
+  text-align: left;
+}
+#publications .publication-content {
+  text-align: center;
+}
+
+#publications .publication-authors,
+#publications .publication-venue,
+#publications .publication-description,
+#publications .publication-links {
+  text-align: center;
+}
+
+
+.section h2 {
+  font-size: 34px;
+  margin-bottom: 16px;
+  color: #000;
+  text-align: left;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+#cv a {
+  color: #000;
+  font-weight: 700;
+}
+
+.brand,
+.nav a,
+.icon-link {
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.brand:hover,
+.nav a:hover,
+.icon-link:hover {
+  background-color: orange;
+  color: white;
+  opacity: 1;
+}
+
+#publications {
+  margin-top: 20px;
+}
+
+.publication-item {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 1px;
+  align-items: start;
+  padding: 15px 0;
+}
+
+.publication-image img {
+  width: 100%;
+  max-width: 210px;
+  height: auto;
+  display: block;
+}
+
+.publication-content h3 {
+  font-size: 18px;
+  line-height: 1.35;
+  margin: 0 0 8px;
+  color: #222;
+}
+
+.publication-content .publication-authors {
+  font-size: 14px;
+  margin: 0 0 4px;
+  line-height: 1.5;
+}
+
+.publication-content .publication-venue {
+  font-size: 14px;
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.publication-content .publication-description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.publication-links {
+  margin: 4px 0 0;
+  font-size: 12px;
+}
+
+.doi-button {
+  display: inline-block;
+  background: #bfbfbf;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 1px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.doi-button:hover {
+  background: orange;
+}
+
+.mentored-students {
+  padding-left: 20px;
+  margin: 10px 0 0;
+}
+
+.mentored-students li {
+  margin-bottom: 2px;
+  line-height: 1.3;
+  text-align: left;
+}
+.student-date {
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 1px;
+}
+
+.student-description {
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 1px;
+}
+
+.bottombar {
+  background: #a9a9a9;
+  color: white;
+  text-align: center;
+  padding: 20px 20px;
+  margin-top: 10px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.bottombar p {
+  margin: 0;
+  font-size: 16px;
+}
+
+#book-chapters {
+  margin-top: 20px;
+}
+
+.book-chapter-list {
+  padding-left: 28px;
+  margin: 20px 0 0;
+}
+
+.book-chapter-item {
+  margin-bottom: 16px;
+  padding-left: 6px;
+}
+
+.book-chapter-item h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  color: #222;
+  text-align: left;
+}
+
+.book-chapter-item .publication-authors,
+.book-chapter-item .publication-venue {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 6px;
+  text-align: left;
+}
+
+
+.news-title {
+  margin-top: -70px;
+}
+
+.news-item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  align-items: start;
+}
+
+.news-date {
+  font-size: 26px;
+  font-weight: 700;
+  color: black;   /* green tone like your example */
+}
+
+.news-content h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.news-content p {
+  margin: 0 0 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.news-image {
+  /* width: 100%; */
+  width: auto;
+  max-width: 400px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.news-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.news-images img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.inline-link {
+  color: black;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;   /* 👈 this creates ...... style */
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
+}
+
+.inline-link:hover {
+  color: orange;
+}
+
+.award-text {
+  font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 14px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+  }
+
+  .topbar-left {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav a {
+    padding: 4px 6px;
+  }
+
+  .topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .container {
+    padding: 190px 20px 40px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 44px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .publication-item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .publication-image img {
+    max-width: 100%;
+  }
+
+  .publication-content h3 {
+    font-size: 20px;
+  }
+
+  .publication-content .publication-authors,
+  .publication-content .publication-venue,
+  .publication-content .publication-description {
+    font-size: 16px;
+  }
+    .book-chapter-list {
+    padding-left: 22px;
+  }
+
+  .book-chapter-item h3 {
+    font-size: 20px;
+  }
+
+  .book-chapter-item .publication-authors,
+  .book-chapter-item .publication-venue {
+    font-size: 16px;
+  }
+}
