@@ -115,7 +115,7 @@ function App() {
             </p>
 
             <p>
-              Research interests include Biomaterials, Tissue Engineering, Regenerative Medicine, 
+              Research interests include Biomaterials, Stem Cells Engineering, Tissue Engineering, Regenerative Medicine, 
               Drug Delivery, Therapeutic Delivery
             </p>
           </div>
