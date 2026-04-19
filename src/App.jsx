@@ -185,9 +185,6 @@ function App() {
 
             </div>
           </div>
-        </section>
-        <section id="publications" className="section">
-          <h2>Other Publications</h2>
           
           <div className="publication-item">
             <div className="publication-image">
