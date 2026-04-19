@@ -157,7 +157,7 @@ function App() {
 
           <div className="publication-item">
             <div className="publication-image">
-              <img src="/paper2.pdf" alt="Publication 2" />
+              <img src="/paper2.png" alt="Publication 2" />
               <p className="publication-links">
                 <a
                   href="https://doi.org/10.1039/D4TB00716F"
